@@ -672,6 +672,20 @@
     .clink-val { font-family:var(--en); font-size:14px; color:var(--text); }
     .clink-val a { transition:color .2s; }
     .clink-val a:hover { color:var(--accent); }
+    /* ── Cursor glow ── */
+    #cursor-glow {
+      position:fixed;
+      width:220px; height:220px;
+      border-radius:50%;
+      pointer-events:none;
+      z-index:99;
+      background:radial-gradient(circle, rgba(10,132,255,.08) 0%, transparent 70%);
+      transform:translate(-50%,-50%);
+      opacity:0;
+      transition:opacity .5s ease, left .05s linear, top .05s linear;
+      will-change:left,top,opacity;
+    }
+
     .contact-ctas { display:flex; gap:10px; flex-wrap:wrap; }
     /* Buttons on light bg override */
     .contact-ctas .btn-dark {
@@ -1354,6 +1368,17 @@
     });
   });
 
+  /* ── Global cursor glow (white sections only) ── */
+  const cursorGlow = document.getElementById('cursor-glow');
+  document.addEventListener('mousemove', e => {
+    cursorGlow.style.left = e.clientX + 'px';
+    cursorGlow.style.top  = e.clientY + 'px';
+    const el = document.elementFromPoint(e.clientX, e.clientY);
+    const onWhite = el && el.closest('.sec-white, #contact, #stats');
+    cursorGlow.style.opacity = onWhite ? '1' : '0';
+  }, { passive: true });
+  document.addEventListener('mouseleave', () => { cursorGlow.style.opacity = '0'; });
+
   /* ── Skills cell spotlight ───────────────── */
   document.querySelectorAll('.sg').forEach(cell => {
     cell.addEventListener('mousemove', e => {
@@ -1363,6 +1388,9 @@
     });
   });
 </script>
+
+
+<div id="cursor-glow"></div>
 
 </body>
 </html>
