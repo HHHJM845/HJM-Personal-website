@@ -349,7 +349,16 @@
     }
 
     @media(max-width:900px){
-      .hero-grid{ grid-template-columns:1fr; padding:48px 22px 56px; gap:40px; }
+      .hero-grid{ grid-template-columns:1fr; padding:56px 22px 48px; gap:32px; }
+      .hero-card-wrap{ max-width:480px; }
+    }
+    @media(max-width:560px){
+      .hero-grid{ padding:48px 18px 44px; gap:28px; }
+      .hero-name{ letter-spacing:-.035em; }
+      .hero-sub{ font-size:13.5px; margin-bottom:32px; }
+      .hero-ctas{ flex-direction:column; gap:8px; }
+      .hero-ctas .btn{ width:100%; justify-content:center; padding:13px 22px; }
+      .hero-card-wrap{ display:none; }
     }
 
     /* ════════════════════════════════════════════════
@@ -394,6 +403,8 @@
        SECTION SHELL
     ════════════════════════════════════════════════ */
     .sec { padding:100px 0; }
+    @media(max-width:768px){ .sec{ padding:64px 0; } }
+    @media(max-width:480px){ .sec{ padding:52px 0; } }
     .sec-white { background:var(--white); }
     .sec-tag {
       display:flex; align-items:center; gap:10px;
@@ -555,8 +566,15 @@
     .ps-lbl { font-size:10.5px; color:var(--muted); }
 
     @media(max-width:768px){
-      .proj-grid{ grid-template-columns:1fr }
-      .pcard-featured{ grid-column:auto; grid-template-columns:1fr; gap:28px }
+      .proj-grid{ grid-template-columns:1fr; gap:14px; margin-top:32px; }
+      .pcard-featured{ grid-column:auto; grid-template-columns:1fr; gap:28px; }
+      .pcard{ padding:22px; }
+      .pcard-link-hint{ opacity:1 !important; transform:none !important; position:static; margin-bottom:12px; display:inline-flex; }
+    }
+    @media(max-width:480px){
+      .pcard{ padding:18px; border-radius:16px; }
+      .ptitle{ font-size:17px; }
+      .ps-num{ font-size:18px; }
     }
 
     /* ════════════════════════════════════════════════
@@ -632,7 +650,13 @@
       box-shadow:0 1px 0 rgba(255,255,255,.8) inset, 0 4px 10px rgba(10,132,255,.1);
     }
     @media(max-width:680px){
-      .skills-wrap{ grid-template-columns:1fr }
+      .skills-wrap{ grid-template-columns:1fr; border-radius:16px; }
+      .sg{ padding:22px; }
+      .sg-title{ font-size:15px; margin-bottom:14px; }
+    }
+    @media(max-width:480px){
+      .sg{ padding:18px; }
+      .stag{ font-size:11px; padding:4px 10px; }
     }
 
     /* ════════════════════════════════════════════════
@@ -703,6 +727,11 @@
     }
 
     .contact-ctas { display:flex; gap:10px; flex-wrap:wrap; }
+    @media(max-width:768px){
+      #contact{ padding:72px 0; }
+      .contact-ctas{ flex-direction:column; gap:8px; }
+      .contact-ctas .btn{ width:100%; justify-content:center; padding:13px 22px; }
+    }
     /* Buttons on light bg override */
     .contact-ctas .btn-dark {
       background:linear-gradient(145deg,#1c1c1e 0%,#111 100%);
@@ -1363,7 +1392,10 @@
   }, { passive: true });
 
   /* ── Card 3D Tilt + Spotlight ───────────── */
+  const isTouch = window.matchMedia('(hover: none)').matches;
+  if (isTouch) { document.getElementById('cursor-glow').style.display = 'none'; }
   document.querySelectorAll('.pcard').forEach(card => {
+    if (isTouch) return;
     let isHovered = false;
     card.addEventListener('mouseenter', () => {
       isHovered = true;
@@ -1391,7 +1423,9 @@
   /* ── Global cursor glow (white sections only) ── */
   const cursorGlow = document.getElementById('cursor-glow');
   const half = 120;
+  if (isTouch) { cursorGlow.style.display = 'none'; }
   document.addEventListener('mousemove', e => {
+    if (isTouch) return;
     cursorGlow.style.transform = `translate(${e.clientX - half}px, ${e.clientY - half}px)`;
     const el = document.elementFromPoint(e.clientX, e.clientY);
     const onDark = el && el.closest('#hero, #nav, .foot, .nav-drawer');
@@ -1401,6 +1435,7 @@
 
   /* ── Skills cell spotlight ───────────────── */
   document.querySelectorAll('.sg').forEach(cell => {
+    if (isTouch) return;
     cell.addEventListener('mousemove', e => {
       const r = cell.getBoundingClientRect();
       cell.style.setProperty('--mx', `${e.clientX - r.left}px`);
