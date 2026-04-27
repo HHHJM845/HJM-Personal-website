@@ -531,6 +531,22 @@
       box-shadow:0 1px 0 rgba(255,255,255,.5) inset;
     }
 
+    .pcard-link-hint {
+      position:absolute; top:0; right:0;
+      display:inline-flex; align-items:center; gap:5px;
+      font-family:var(--en); font-size:11px; font-weight:500;
+      color:var(--accent);
+      background:var(--accent-dim);
+      border:1px solid rgba(10,132,255,.18);
+      padding:4px 10px; border-radius:20px;
+      opacity:0; transform:translateY(4px);
+      transition:opacity .25s, transform .25s;
+      pointer-events:none;
+    }
+    .pcard:hover .pcard-link-hint {
+      opacity:1; transform:translateY(0);
+    }
+
     /* mini stats row inside compact cards */
     .pstats { display:flex; gap:20px; padding-top:20px; margin-top:20px; border-top:1px solid var(--border); }
     .ps-item {}
@@ -951,8 +967,12 @@
 
       <!-- ── Featured: AI Content Platform ── -->
       <div class="pcard pcard-featured reveal" onclick="window.open('http://122.152.224.125:3001/','_blank')" style="cursor:pointer">
-        <div>
+        <div style="position:relative">
           <div class="ptag">Multi-Agent · RAG · AIGC</div>
+          <div class="pcard-link-hint">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M4 2h6v6"/></svg>
+            点击查看 Demo
+          </div>
           <h3 class="ptitle">AI 内容创作协作平台</h3>
           <p class="psub">面向影视工作室的 <b>Multi-Agent</b> 视觉生产工作流，从剧本到 AI 审阅的全链路自动化。</p>
           <ul class="phigh">
@@ -1028,7 +1048,7 @@
       <div class="pcard reveal d2">
         <div class="ptag">RAG · 对话状态机 · ToB</div>
         <h3 class="ptitle">数字人销售赋能系统</h3>
-        <p class="psub">面向黄金零售与销售培训场景的 AI 销售助手。</p>
+        <p class="psub">面向黄金批发与销售培训场景的 AI 销售助手。</p>
         <ul class="phigh">
           <li>设计产品知识、销售话术、异议处理三层 <b>RAG</b> 知识库</li>
           <li>设计五段式对话状态机（<b>Dialogue State Machine</b>）</li>
