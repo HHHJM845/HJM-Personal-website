@@ -1374,8 +1374,8 @@
   document.addEventListener('mousemove', e => {
     cursorGlow.style.transform = `translate(${e.clientX - half}px, ${e.clientY - half}px)`;
     const el = document.elementFromPoint(e.clientX, e.clientY);
-    const onWhite = el && el.closest('.sec-white, #contact');
-    cursorGlow.style.opacity = onWhite ? '1' : '0';
+    const onDark = el && el.closest('#hero, #nav, .foot, .nav-drawer');
+    cursorGlow.style.opacity = onDark ? '0' : '1';
   }, { passive: true });
   document.addEventListener('mouseleave', () => { cursorGlow.style.opacity = '0'; });
 
