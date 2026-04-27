@@ -675,15 +675,15 @@
     /* ── Cursor glow ── */
     #cursor-glow {
       position:fixed;
-      width:220px; height:220px;
+      top:0; left:0;
+      width:240px; height:240px;
       border-radius:50%;
       pointer-events:none;
       z-index:99;
-      background:radial-gradient(circle, rgba(10,132,255,.08) 0%, transparent 70%);
-      transform:translate(-50%,-50%);
+      background:radial-gradient(circle, rgba(10,132,255,.11) 0%, rgba(10,132,255,.04) 40%, transparent 70%);
       opacity:0;
-      transition:opacity .5s ease, left .05s linear, top .05s linear;
-      will-change:left,top,opacity;
+      transition:opacity .45s ease;
+      will-change:transform, opacity;
     }
 
     .contact-ctas { display:flex; gap:10px; flex-wrap:wrap; }
@@ -1370,11 +1370,11 @@
 
   /* ── Global cursor glow (white sections only) ── */
   const cursorGlow = document.getElementById('cursor-glow');
+  const half = 120;
   document.addEventListener('mousemove', e => {
-    cursorGlow.style.left = e.clientX + 'px';
-    cursorGlow.style.top  = e.clientY + 'px';
+    cursorGlow.style.transform = `translate(${e.clientX - half}px, ${e.clientY - half}px)`;
     const el = document.elementFromPoint(e.clientX, e.clientY);
-    const onWhite = el && el.closest('.sec-white, #contact, #stats');
+    const onWhite = el && el.closest('.sec-white, #contact');
     cursorGlow.style.opacity = onWhite ? '1' : '0';
   }, { passive: true });
   document.addEventListener('mouseleave', () => { cursorGlow.style.opacity = '0'; });
