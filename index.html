@@ -559,6 +559,7 @@
       opacity:0; transform:translateY(4px);
       transition:opacity .25s, transform .25s;
       pointer-events:none;
+      z-index:3;
     }
     .pcard:hover .pcard-link-hint {
       opacity:1; transform:translateY(0);
@@ -1013,12 +1014,12 @@
 
       <!-- ── Featured: AI Content Platform ── -->
       <div class="pcard pcard-featured reveal" onclick="window.open('http://122.152.224.125:3001/','_blank')" style="cursor:pointer">
+        <div class="pcard-link-hint">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M4 2h6v6"/></svg>
+          &#28857;&#20987;&#26597;&#30475; Demo
+        </div>
         <div style="position:relative">
           <div class="ptag">Multi-Agent · RAG · AIGC</div>
-          <div class="pcard-link-hint">
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M4 2h6v6"/></svg>
-            点击查看 Demo
-          </div>
           <h3 class="ptitle">AI 内容创作协作平台</h3>
           <p class="psub">面向影视工作室的 <b>Multi-Agent</b> 视觉生产工作流，从剧本到 AI 审阅的全链路自动化。</p>
           <ul class="phigh">
@@ -1068,7 +1069,7 @@
       <div class="pcard reveal d1" onclick="window.open('http://127.0.0.1:5173/','_blank')" style="cursor:pointer">
         <div class="pcard-link-hint">
           <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L10 2M4 2h6v6"/></svg>
-          鐐瑰嚮鏌ョ湅 Demo
+          &#28857;&#20987;&#26597;&#30475; Demo
         </div>
         <div class="ptag">MVP · Marketplace · AI Tagging</div>
         <h3 class="ptitle">AI 影视承接平台</h3>
