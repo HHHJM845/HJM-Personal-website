@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>黄佳沐 — AI Product Manager</title>
-  <meta name="description" content="黄佳沐，AI 产品经理，专注 AIGC、AI 内容生产工作流、Agentic RAG、RAG 系统设计与商业化落地。" />
+  <meta name="description" content="黄佳沐，AI 产品经理，专注 AIGC、AI 内容生产工作流、Agentic RAG、Context Engineering 与商业化落地。" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -987,12 +987,13 @@
       </div>
       <div class="reveal d2">
         <p class="about-body">
-          我是一名 <strong>AI 产品经理</strong>，具备从产品定义到技术落地的独立判断能力，主导过 AI 内容生产工作流、RAG 三层检索、轻量 Agentic RAG、对话状态机与 Prompt Engineering 落地。相比只做需求管理，我更关注 AI 是否真正解决用户工作流中的痛点，并通过模型评测、数据反馈、快速原型和 PMF 验证推动产品价值闭环。
+          我是一名 <strong>AI 产品经理</strong>，具备从产品定义到技术落地的独立判断能力，主导过 AI 内容生产工作流、RAG 三层检索、轻量 Agentic RAG、对话状态机与 Prompt / Context Engineering 落地。相比只做需求管理，我更关注 AI 是否真正解决用户工作流中的痛点，并通过模型评测、数据反馈、快速原型和 PMF 验证推动产品价值闭环。
         </p>
         <div class="tag-row">
           <span class="tag">RAG</span>
           <span class="tag">Agentic RAG</span>
           <span class="tag">Prompt Engineering</span>
+          <span class="tag">Context Engineering</span>
           <span class="tag">LLM</span>
           <span class="tag">AI Evaluation</span>
           <span class="tag">Model Selection</span>
@@ -1021,14 +1022,14 @@
           &#28857;&#20987;&#26597;&#30475; Demo
         </div>
         <div style="position:relative">
-          <div class="ptag">AI Workflow · RAG · AI Review · Commercialization</div>
+          <div class="ptag">AI Workflow · HITL Review · Context Engineering</div>
           <h3 class="ptitle">AI 内容创作协作平台</h3>
           <p class="psub">面向影视与内容团队的 <b>AI</b> 创作协作平台，从单点生成工具升级为可管理的团队工作流。</p>
           <ul class="phigh">
             <li>调研 9 个主流 AIGC 工具并访谈影视团队，定义多项目管理、版本控制、甲方审片等协作能力</li>
-            <li>设计剧本解析、<b>Prompt</b> 生成、图片生成、批注审阅的 AI 全链路视觉工作流产品方案</li>
+            <li>设计剧本解析、<b>Prompt</b> 生成、图片生成、批注审阅的 AI 全链路视觉工作流与 <b>HITL</b> 审阅机制</li>
             <li>设计多模型评测框架，评估 Kling、Seedance、Vidu、Nano Banana、即梦等模型调用策略</li>
-            <li>搭建 <b>RAG Prompt</b> 经验库，口语化指令召回从 60% 提升至 92%，AI 建议一键采纳率达 78%</li>
+            <li>搭建 <b>RAG Prompt</b> 经验库与 Context Engineering 测评集，口语化指令召回从 60% 提升至 92%</li>
             <li>辅助作品获得 B 站 AI 动画大赛奖项、WAIFF 最佳叙事奖，并入围海南岛国际电影节、北京国际电影节 AIGC 单元</li>
             <li>完成商业化冷启动，签约 8 家付费影视工作室，采用「订阅 + 积分」双轨变现模式</li>
           </ul>
@@ -1062,6 +1063,7 @@
             <div class="stages-pills">
               <span class="stage-pill">Script Parse</span>
               <span class="stage-pill">Prompt Gen</span>
+              <span class="stage-pill">HITL Review</span>
               <span class="stage-pill">Model Eval</span>
               <span class="stage-pill">AI Review</span>
               <span class="stage-pill">3D Stage</span>
@@ -1102,12 +1104,12 @@
 
       <!-- ── Project 3: Digital Human Sales ── -->
       <div class="pcard reveal d2">
-        <div class="ptag">Agentic RAG · 智能客服 · 销售培训 · ToB</div>
+        <div class="ptag">Agentic RAG · AI Eval · 智能客服 · ToB</div>
         <h3 class="ptitle">RAG 智能客服与销售培训系统</h3>
         <p class="psub">面向黄金批发业务的私域咨询承接与新人销售培训系统，数字人作为后续增强层。</p>
         <ul class="phigh">
-          <li>设计“意图识别 - 知识路由 - 检索增强 - 答案生成 - 合规校验 - 转人工判断”的轻量 <b>Agentic RAG</b> 链路</li>
-          <li>设计 120 题分场景评估集，专业问答准确率达 95%，结合 Badcase 归因持续迭代</li>
+          <li>设计 <b>Router</b> 意图路由、<b>Retriever</b> 检索增强、<b>Grader</b> 相关性判断、<b>Generator</b> 答案生成、<b>Verifier</b> 合规校验的轻量 Agentic RAG 控制回路</li>
+          <li>设计 120 题分场景评估集，结合人工抽检与 LLM 辅助评分，专业问答准确率达 95%</li>
           <li>5 个月完成 MVP，覆盖 500+ 销售人员，新人培训周期缩短约 60%，私域响应效率提升 2 倍</li>
         </ul>
         <div class="pstats">
@@ -1180,6 +1182,7 @@
           <span class="stag">RAG</span>
           <span class="stag">Agentic RAG</span>
           <span class="stag">Prompt Engineering</span>
+          <span class="stag">Context Engineering</span>
           <span class="stag">AI Evaluation</span>
           <span class="stag">Model Selection</span>
           <span class="stag">Dialogue State Machine</span>
@@ -1202,6 +1205,7 @@
         <div class="stags">
           <span class="stag">LLM 选型</span>
           <span class="stag">Embedding 评测</span>
+          <span class="stag">AI Eval</span>
           <span class="stag">Badcase 归因</span>
           <span class="stag">API 集成</span>
           <span class="stag">Claude Code</span>
@@ -1248,7 +1252,7 @@
         <div class="tperiod">2023.02 — 2023.12</div>
         <div>
           <div class="tcompany">网易有道</div>
-          <div class="trole">产品助理实习生 · RAG 语料评估 / Prompt 调优</div>
+          <div class="trole">产品助理实习生 · RAG 语料治理 / 评估集建设 / Prompt 调优</div>
         </div>
       </div>
       <div class="titem reveal-left d3">
