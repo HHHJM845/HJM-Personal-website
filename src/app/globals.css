@@ -57,7 +57,7 @@ body {
 
 .crt-loader {
   position: relative;
-  width: min(440px, calc(100vw - 48px));
+  width: min(300px, calc(100vw - 56px));
 }
 
 .crt-loader::before {
@@ -78,29 +78,30 @@ body {
 .crt-loader__text {
   color: #f8f8f8;
   font-family: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
-  font-size: clamp(19px, 2.8vw, 32px);
-  font-weight: 600;
+  font-size: clamp(12px, 1.6vw, 15px);
+  font-weight: 500;
   letter-spacing: 0;
   line-height: 1;
-  margin-bottom: 28px;
+  margin-bottom: 14px;
   position: relative;
-  text-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.18);
 }
 
 .crt-loader__bar {
   background: #050505;
-  border: 3px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.16);
-  height: 34px;
-  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.12);
+  height: 12px;
+  padding: 2px;
   position: relative;
 }
 
 .crt-loader__fill {
   background: #fff;
-  box-shadow: 0 0 18px rgba(255, 255, 255, 0.28);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.24);
   height: 100%;
-  min-width: 4px;
+  min-width: 2px;
   transition: width 0.18s linear;
 }
 
