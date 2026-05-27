@@ -94,11 +94,16 @@ export function ArrivalExperience() {
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
       context.clearRect(0, 0, width, height);
 
-      const scale = Math.max(width / image.naturalWidth, height / image.naturalHeight);
+      const isMobile = width < 768;
+      const scale = isMobile
+        ? Math.min(width / image.naturalWidth, height / image.naturalHeight)
+        : Math.max(width / image.naturalWidth, height / image.naturalHeight);
       const drawWidth = image.naturalWidth * scale;
       const drawHeight = image.naturalHeight * scale;
       const x = (width - drawWidth) / 2;
-      const y = (height - drawHeight) / 2;
+      const y = isMobile
+        ? Math.max((height - drawHeight) * 0.42, 88)
+        : (height - drawHeight) / 2;
       context.drawImage(image, x, y, drawWidth, drawHeight);
     };
 
@@ -134,13 +139,14 @@ export function ArrivalExperience() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[310vh] bg-black md:h-[410vh]"
+      className="relative h-[290vh] bg-black md:h-[410vh]"
       id="arrival"
     >
       <div className="sticky top-0 h-dvh overflow-hidden bg-black">
         <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.18)_48%,rgba(0,0,0,0.74)_100%)]" />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.62),transparent_30%,transparent_70%,rgba(0,0,0,0.58))]" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-black via-black/70 to-transparent md:hidden" />
 
         {loaded < FRAME_COUNT && (
           <div className="absolute inset-0 z-30 grid place-items-center bg-black">
@@ -191,12 +197,12 @@ export function ArrivalExperience() {
 
         <motion.div
           style={{ opacity: openingOpacity }}
-          className="pointer-events-none absolute bottom-24 left-5 z-10 max-w-[34rem] md:bottom-28 md:left-10"
+          className="pointer-events-none absolute bottom-10 left-5 right-5 z-10 max-w-[24rem] md:bottom-28 md:left-10 md:right-auto md:max-w-[34rem]"
         >
           <p className="font-mono text-xs uppercase text-white/56">
             AI Product Manager // Subject Detected
           </p>
-          <h1 className="mt-4 text-6xl font-semibold leading-none text-white sm:text-8xl">
+          <h1 className="mt-4 text-5xl font-semibold leading-none text-white sm:text-8xl">
             黄佳沐
             <br />
             HUANG JIAMU
