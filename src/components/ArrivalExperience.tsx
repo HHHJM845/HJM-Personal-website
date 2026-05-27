@@ -102,7 +102,7 @@ export function ArrivalExperience() {
       const drawHeight = image.naturalHeight * scale;
       const x = (width - drawWidth) / 2;
       const y = isMobile
-        ? Math.max((height - drawHeight) * 0.42, 88)
+        ? Math.max((height - drawHeight) * 0.18, 18)
         : (height - drawHeight) / 2;
       context.drawImage(image, x, y, drawWidth, drawHeight);
     };
@@ -171,7 +171,7 @@ export function ArrivalExperience() {
           </div>
         )}
 
-        <nav className="absolute left-4 right-4 top-4 z-20 flex items-center justify-between gap-4 md:left-8 md:right-8">
+        <nav className="absolute left-4 right-4 top-3 z-20 flex items-center justify-between gap-4 md:left-8 md:right-8 md:top-4">
           <a className="noir-glass px-3 py-2 font-mono text-xs uppercase text-white/72" href="#arrival">
             HJM. // Archive
           </a>
@@ -197,7 +197,7 @@ export function ArrivalExperience() {
 
         <motion.div
           style={{ opacity: openingOpacity }}
-          className="pointer-events-none absolute bottom-10 left-5 right-5 z-10 max-w-[24rem] md:bottom-28 md:left-10 md:right-auto md:max-w-[34rem]"
+          className="pointer-events-none absolute bottom-8 left-5 right-5 z-10 max-w-[24rem] md:bottom-28 md:left-10 md:right-auto md:max-w-[34rem]"
         >
           <p className="font-mono text-xs uppercase text-white/56">
             AI Product Manager // Subject Detected
