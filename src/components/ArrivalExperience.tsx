@@ -144,22 +144,23 @@ export function ArrivalExperience() {
 
         {loaded < FRAME_COUNT && (
           <div className="absolute inset-0 z-30 grid place-items-center bg-black">
-            <div className="noir-glass w-[min(34rem,calc(100vw-2.5rem))] p-6">
-              <p className="font-mono text-xs uppercase text-white/48">
-                Personal Archive // Loading
+            <div className="crt-loader" aria-live="polite">
+              <p className="crt-loader__text" data-text="Loading.... Please Wait">
+                Loading.... Please Wait
               </p>
-              <p className="mt-4 text-2xl font-semibold text-white">
-                Loading identity sequence...
-              </p>
-              <div className="mt-6 h-px bg-white/12">
+              <div
+                className="crt-loader__bar"
+                role="progressbar"
+                aria-label="Loading identity sequence"
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-valuenow={loadingPercent}
+              >
                 <div
-                  className="h-px bg-white"
+                  className="crt-loader__fill"
                   style={{ width: `${loadingPercent}%` }}
                 />
               </div>
-              <p className="mt-4 font-mono text-xs text-white/60">
-                {loadingPercent}%
-              </p>
             </div>
           </div>
         )}
