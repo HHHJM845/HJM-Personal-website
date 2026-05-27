@@ -183,6 +183,36 @@ body {
   padding: 0 48px;
 }
 
+.content-motion-bg {
+  background: #000;
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-motion-bg__video {
+  filter: blur(28px) saturate(0.72) contrast(1.08);
+  height: 100dvh;
+  inset: 0;
+  object-fit: cover;
+  opacity: 0.34;
+  pointer-events: none;
+  position: fixed;
+  transform: scale(1.12);
+  width: 100%;
+  z-index: -2;
+}
+
+.content-motion-bg__veil {
+  background:
+    radial-gradient(circle at 50% 18%, transparent 0%, rgba(0, 0, 0, 0.3) 44%, rgba(0, 0, 0, 0.86) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.82));
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+}
+
 .btn {
   align-items: center;
   border-radius: 10px;
@@ -222,7 +252,8 @@ body {
 }
 
 #stats {
-  background: #030303;
+  background: rgba(3, 3, 3, 0.72);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   border-top: 1px solid var(--border);
 }
@@ -270,12 +301,12 @@ body {
 }
 
 .sec {
-  background: #000;
+  background: rgba(0, 0, 0, 0.52);
   padding: 100px 0;
 }
 
 .sec-panel {
-  background: #050505;
+  background: rgba(5, 5, 5, 0.68);
 }
 
 .sec-tag {
@@ -817,7 +848,7 @@ body {
 }
 
 #contact {
-  background: #000;
+  background: rgba(0, 0, 0, 0.58);
   border-top: 1px solid var(--border);
   padding: 120px 0;
 }
@@ -893,7 +924,7 @@ body {
 }
 
 footer {
-  background: #050505;
+  background: rgba(5, 5, 5, 0.78);
   border-top: 1px solid var(--border);
   padding: 30px 0;
 }

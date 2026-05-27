@@ -78,32 +78,45 @@ export default function Home() {
       <RevealEffects />
       <ArrivalExperience />
 
-      <section id="stats">
-        <div className="stats-wrap">
-          <div className="stats-grid">
-            {stats.map(([target, suffix, lineA, lineB], index) => (
-              <div
-                className={`stat-cell reveal-pop d${(index % 6) + 1}`}
-                data-count-scope
-                key={`${lineA}-${lineB}`}
-              >
-                <div className="stat-num">
-                  <span data-count-target={target} data-count-suffix={suffix}>
-                    0{suffix}
-                  </span>
-                </div>
-                <div className="stat-lbl">
-                  {lineA}
-                  <br />
-                  {lineB}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="content-motion-bg">
+        <video
+          aria-hidden="true"
+          autoPlay
+          className="content-motion-bg__video"
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          src="/media/abstract-noir-background.mp4"
+        />
+        <div className="content-motion-bg__veil" />
 
-      <section className="sec" id="identity">
+        <section id="stats">
+          <div className="stats-wrap">
+            <div className="stats-grid">
+              {stats.map(([target, suffix, lineA, lineB], index) => (
+                <div
+                  className={`stat-cell reveal-pop d${(index % 6) + 1}`}
+                  data-count-scope
+                  key={`${lineA}-${lineB}`}
+                >
+                  <div className="stat-num">
+                    <span data-count-target={target} data-count-suffix={suffix}>
+                      0{suffix}
+                    </span>
+                  </div>
+                  <div className="stat-lbl">
+                    {lineA}
+                    <br />
+                    {lineB}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="sec" id="identity">
         <div className="wrap">
           <div className="about-grid">
             <div>
@@ -131,9 +144,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      <section className="sec sec-panel" id="projects">
+        <section className="sec sec-panel" id="projects">
         <div className="wrap">
           <div className="sec-tag reveal-left">Projects</div>
           <h2 className="sec-h reveal d1">精选项目</h2>
@@ -245,9 +258,9 @@ export default function Home() {
             </article>
           </div>
         </div>
-      </section>
+        </section>
 
-      <section className="sec" id="methodology">
+        <section className="sec" id="methodology">
         <div className="wrap">
           <div className="sec-tag reveal-left">Methodology</div>
           <h2 className="sec-h reveal d1">我的 AI 产品方法论</h2>
@@ -261,9 +274,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+        </section>
 
-      <section className="sec sec-panel" id="capabilities">
+        <section className="sec sec-panel" id="capabilities">
         <div className="wrap">
           <div className="sec-tag reveal-left">Capabilities</div>
           <h2 className="sec-h reveal d1">核心能力</h2>
@@ -283,9 +296,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+        </section>
 
-      <section className="sec" id="experience">
+        <section className="sec" id="experience">
         <div className="wrap">
           <div className="sec-tag reveal-left">Experience</div>
           <h2 className="sec-h reveal d1">经历</h2>
@@ -301,9 +314,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+        </section>
 
-      <section id="contact">
+        <section id="contact">
         <div className="wrap">
           <h2 className="contact-h reveal">
             一起构建真正
@@ -363,9 +376,9 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+        </section>
 
-      <footer>
+        <footer>
         <div className="wrap">
           <div className="foot-inner">
             <div className="foot-copy">
@@ -379,7 +392,8 @@ export default function Home() {
             </nav>
           </div>
         </div>
-      </footer>
+        </footer>
+      </div>
     </main>
   );
 }
