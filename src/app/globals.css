@@ -275,7 +275,7 @@ body {
 }
 
 #stats {
-  background: rgba(3, 3, 3, 0.48);
+  background: rgba(3, 3, 3, 0.28);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
   border-top: 1px solid var(--border);
@@ -324,12 +324,12 @@ body {
 }
 
 .sec {
-  background: rgba(0, 0, 0, 0.28);
+  background: rgba(0, 0, 0, 0.12);
   padding: 100px 0;
 }
 
 .sec-panel {
-  background: rgba(5, 5, 5, 0.38);
+  background: rgba(5, 5, 5, 0.18);
 }
 
 .sec-tag {
@@ -440,13 +440,15 @@ body {
 
 .pcard {
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.028)),
-    #050505;
-  border: 1px solid var(--border);
+    linear-gradient(160deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.026)),
+    rgba(6, 6, 6, 0.44);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 20px;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    0 24px 80px rgba(0, 0, 0, 0.32);
+    0 24px 80px rgba(0, 0, 0, 0.24);
   cursor: default;
   overflow: hidden;
   padding: 34px;
@@ -481,10 +483,10 @@ body {
 }
 
 .pcard:hover {
-  border-color: var(--border-med);
+  border-color: rgba(255, 255, 255, 0.22);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.16),
-    0 30px 90px rgba(0, 0, 0, 0.5);
+    0 30px 90px rgba(0, 0, 0, 0.38);
 }
 
 .pcard:hover::before,
@@ -612,8 +614,8 @@ body {
 }
 
 .stages-box {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 14px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
   margin-top: 20px;
@@ -759,10 +761,12 @@ body {
 }
 
 .skills-wrap {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
   display: grid;
   gap: 1px;
   grid-template-columns: 1fr 1fr;
@@ -773,8 +777,8 @@ body {
 .sg {
   background:
     radial-gradient(500px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.075), transparent 55%),
-    linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025)),
-    #050505;
+    linear-gradient(160deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.022)),
+    rgba(6, 6, 6, 0.42);
   overflow: hidden;
   padding: 34px;
   position: relative;
