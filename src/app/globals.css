@@ -1108,13 +1108,15 @@ footer {
 
   .stat-cell {
     background:
-      linear-gradient(155deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.03)),
-      rgba(0, 0, 0, 0.42);
-    border: 1px solid rgba(255, 255, 255, 0.105);
+      linear-gradient(155deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.07)),
+      rgba(18, 18, 18, 0.58);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 14px;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.13),
-      0 18px 46px rgba(0, 0, 0, 0.25);
+      inset 0 1px 0 rgba(255, 255, 255, 0.22),
+      0 18px 46px rgba(0, 0, 0, 0.32);
     flex: 0 0 132px;
     min-height: 102px;
     padding: 20px 14px 18px;
@@ -1124,7 +1126,7 @@ footer {
   .stat-cell:nth-child(2n),
   .stat-cell:nth-child(3n),
   .stat-cell:nth-last-child(-n + 3) {
-    border: 1px solid rgba(255, 255, 255, 0.105);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .stat-num {
@@ -1139,13 +1141,15 @@ footer {
 
   .about-grid {
     background:
-      linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.024)),
-      rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.095);
+      linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.055)),
+      rgba(14, 14, 14, 0.66);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border: 1px solid rgba(255, 255, 255, 0.19);
     border-radius: 18px;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.1),
-      0 24px 70px rgba(0, 0, 0, 0.24);
+      inset 0 1px 0 rgba(255, 255, 255, 0.22),
+      0 24px 70px rgba(0, 0, 0, 0.36);
     gap: 26px;
     grid-template-columns: 1fr;
     overflow: hidden;
@@ -1188,10 +1192,15 @@ footer {
 
   .pcard {
     background:
-      linear-gradient(158deg, rgba(255, 255, 255, 0.092), rgba(255, 255, 255, 0.026)),
-      rgba(4, 4, 4, 0.72);
-    border-color: rgba(255, 255, 255, 0.12);
+      linear-gradient(158deg, rgba(255, 255, 255, 0.17), rgba(255, 255, 255, 0.056)),
+      rgba(14, 14, 14, 0.72);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border-color: rgba(255, 255, 255, 0.2);
     border-radius: 18px;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.22),
+      0 28px 78px rgba(0, 0, 0, 0.38);
     padding: 20px;
   }
 
@@ -1251,14 +1260,16 @@ footer {
   }
 
   .pmetrics {
-    background: rgba(255, 255, 255, 0.035);
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.075);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 14px;
     gap: 12px;
     padding: 14px;
   }
 
   .stages-box {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.16);
     border-radius: 14px;
     margin-top: 12px;
     padding: 14px;
@@ -1278,8 +1289,8 @@ footer {
   }
 
   .ps-item {
-    background: rgba(255, 255, 255, 0.035);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.075);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 12px;
     min-width: 0;
     padding: 11px 8px;
@@ -1303,8 +1314,12 @@ footer {
   }
 
   .clink-row {
-    background: rgba(255, 255, 255, 0.035);
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045)),
+      rgba(12, 12, 12, 0.62);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.17);
     border-radius: 14px;
     gap: 12px;
     padding: 12px;
@@ -1337,10 +1352,15 @@ footer {
 
   .sg {
     background:
-      linear-gradient(150deg, rgba(255, 255, 255, 0.082), rgba(255, 255, 255, 0.026)),
-      rgba(4, 4, 4, 0.64);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+      linear-gradient(150deg, rgba(255, 255, 255, 0.155), rgba(255, 255, 255, 0.052)),
+      rgba(14, 14, 14, 0.68);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.19);
     border-radius: 16px;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 20px 62px rgba(0, 0, 0, 0.3);
     padding: 20px;
   }
 }
@@ -1353,10 +1373,15 @@ footer {
 
   .mstep {
     background:
-      linear-gradient(150deg, rgba(255, 255, 255, 0.072), rgba(255, 255, 255, 0.022)),
-      rgba(4, 4, 4, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.09);
+      linear-gradient(150deg, rgba(255, 255, 255, 0.145), rgba(255, 255, 255, 0.048)),
+      rgba(14, 14, 14, 0.62);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 15px;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.18),
+      0 18px 54px rgba(0, 0, 0, 0.28);
     column-gap: 12px;
     padding: 14px;
   }
@@ -1381,10 +1406,15 @@ footer {
 
   .titem {
     background:
-      linear-gradient(150deg, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0.02)),
-      rgba(4, 4, 4, 0.48);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+      linear-gradient(150deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045)),
+      rgba(14, 14, 14, 0.58);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.17);
     border-radius: 15px;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.18),
+      0 18px 54px rgba(0, 0, 0, 0.28);
     gap: 6px;
     grid-template-columns: 1fr;
     margin-left: 14px;
@@ -1422,11 +1452,11 @@ footer {
   }
 
   .stat-cell:nth-child(3n) {
-    border: 1px solid rgba(255, 255, 255, 0.105);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .stat-cell:nth-child(2n) {
-    border: 1px solid rgba(255, 255, 255, 0.105);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
