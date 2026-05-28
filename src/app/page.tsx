@@ -153,7 +153,12 @@ export default function Home() {
           <p className="sec-sub reveal d2">保留原站项目卡片结构，换成黑白档案质感。</p>
 
           <div className="proj-grid">
-            <article className="pcard pcard-featured reveal">
+            <a
+              className="pcard pcard-featured reveal"
+              href="http://122.152.224.125:3001/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <div>
                 <div className="pcard-link-hint">
                   <ExternalIcon />
@@ -201,9 +206,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </article>
+            </a>
 
-            <article className="pcard reveal d1">
+            <a
+              className="pcard reveal d1"
+              href="http://175.178.27.151/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <div className="pcard-link-hint">
                 <ExternalIcon />
                 点击查看 Demo
@@ -230,7 +240,7 @@ export default function Home() {
                   <div className="ps-lbl">AI 自动标签</div>
                 </div>
               </div>
-            </article>
+            </a>
 
             <article className="pcard reveal d2">
               <div className="ptag">Agentic RAG · AI Eval · 智能客服 · ToB</div>

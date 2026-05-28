@@ -460,6 +460,19 @@ body {
     border-color 0.38s var(--ease);
 }
 
+a.pcard {
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+a.pcard:focus-visible {
+  border-color: rgba(255, 255, 255, 0.34);
+  outline: 2px solid rgba(255, 255, 255, 0.58);
+  outline-offset: 4px;
+}
+
 .pcard::before {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.18), transparent);
   content: "";
