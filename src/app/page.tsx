@@ -18,7 +18,9 @@ const tags = [
   "LLM",
   "AI Evaluation",
   "Model Selection",
-  "Vibe Coding",
+  "Claude Code",
+  "Codex",
+  "AI-assisted Prototyping",
   "PMF",
   "AIGC",
   "MVP",
@@ -150,7 +152,6 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-tag reveal-left">Projects</div>
           <h2 className="sec-h reveal d1">精选项目</h2>
-          <p className="sec-sub reveal d2">保留原站项目卡片结构，换成黑白档案质感。</p>
 
           <div className="proj-grid">
             <a
@@ -175,6 +176,7 @@ export default function Home() {
                   <li>设计多模型评测框架，评估 Kling、Seedance、Vidu、Nano Banana、即梦等模型调用策略</li>
                   <li>搭建 RAG Prompt 经验库与 Context Engineering 测评集，口语化指令召回从 60% 提升至 92%</li>
                   <li>完成商业化冷启动，签约 8 家付费影视工作室，采用「订阅 + 积分」双轨变现模式</li>
+                  <li>辅助增量作品入围海南岛国际电影节 AI 电影季、北京国际电影节 AIGC 电影单元，并获海螺 AI × WAIFF 最佳叙事奖</li>
                 </ul>
               </div>
               <div>
