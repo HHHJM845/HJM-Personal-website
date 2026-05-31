@@ -1,3 +1,4 @@
+import { AIBuilderOrbit } from "@/components/AIBuilderOrbit";
 import { ArrivalExperience } from "@/components/ArrivalExperience";
 import { RevealEffects } from "@/components/RevealEffects";
 
@@ -120,16 +121,14 @@ export default function Home() {
 
         <section className="sec" id="identity">
         <div className="wrap">
-          <div className="about-grid">
-            <div>
+          <div className="about-grid about-grid--with-orbit">
+            <div className="about-text">
               <div className="sec-tag reveal-left">About</div>
               <h2 className="about-quote reveal d1">
                 我擅长把 AI
                 <i>从「能力」</i>
                 变成「产品」。
               </h2>
-            </div>
-            <div>
               <p className="about-body reveal d2">
                 我是一名 <strong>AI 产品经理</strong>
                 ，具备从产品定义到技术落地的独立判断能力，主导过 AI 内容生产工作流、RAG 三层检索、轻量
@@ -143,6 +142,9 @@ export default function Home() {
                   </span>
                 ))}
               </div>
+            </div>
+            <div className="about-visual reveal d2">
+              <AIBuilderOrbit />
             </div>
           </div>
         </div>
