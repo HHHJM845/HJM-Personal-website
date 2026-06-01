@@ -388,6 +388,16 @@ export default function Home() {
             <a className="btn btn-ghost" href="https://github.com/HHHJM845">
               查看 GitHub
             </a>
+            <a
+              className="btn btn-ghost resume-download-btn"
+              download="黄佳沐-AI产品经理.pdf"
+              href="/resume/黄佳沐-AI产品经理.pdf"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" />
+              </svg>
+              下载简历
+            </a>
           </div>
         </div>
         </section>

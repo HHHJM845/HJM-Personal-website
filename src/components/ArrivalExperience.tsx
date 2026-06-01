@@ -213,6 +213,16 @@ export function ArrivalExperience() {
               From model capability to usable product workflow.
             </span>
           </p>
+          <a
+            className="btn btn-dark resume-download-btn arrival-resume-btn"
+            download="黄佳沐-AI产品经理.pdf"
+            href="/resume/黄佳沐-AI产品经理.pdf"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" />
+            </svg>
+            下载简历
+          </a>
         </motion.div>
 
         <motion.div

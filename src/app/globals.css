@@ -274,6 +274,30 @@ body {
   transform: translateY(-1px);
 }
 
+.btn:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.58);
+  outline-offset: 4px;
+}
+
+.resume-download-btn svg {
+  fill: none;
+  height: 16px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+  width: 16px;
+}
+
+.arrival-resume-btn {
+  font-family: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  margin-top: 24px;
+  pointer-events: auto;
+  text-transform: uppercase;
+}
+
 #stats {
   background: rgba(3, 3, 3, 0.28);
   backdrop-filter: blur(6px);
