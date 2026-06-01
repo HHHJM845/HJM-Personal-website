@@ -590,6 +590,50 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .about-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .orbit-cloud {
+    aspect-ratio: 1 / 1;
+    max-width: 360px;
+    min-height: 0;
+    width: 100%;
+  }
+
+  .orbit-ring--outer {
+    inset: 22px;
+  }
+
+  .orbit-ring--inner {
+    inset: 82px;
+  }
+
+  .orbit-core {
+    height: 88px;
+    width: 88px;
+  }
+
+  .orbit-core span:first-child {
+    font-size: 8px;
+  }
+
+  .orbit-core span:last-child {
+    font-size: 17px;
+  }
+
+  .tool-badge {
+    height: var(--ms);
+    left: var(--mx);
+    margin-left: calc(var(--ms) / -2);
+    margin-top: calc(var(--ms) / -2);
+    top: var(--my);
+    width: var(--ms);
+  }
+}
+
 .about-quote {
   color: var(--text);
   font-size: clamp(24px, 2.9vw, 36px);
