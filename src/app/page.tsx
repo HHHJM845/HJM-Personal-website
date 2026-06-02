@@ -156,17 +156,17 @@ export default function Home() {
           <h2 className="sec-h reveal d1">精选项目</h2>
 
           <div className="proj-grid">
-            <a
-              className="pcard pcard-featured reveal"
-              href="http://122.152.224.125:3001/"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <article className="pcard pcard-featured reveal">
               <div>
-                <div className="pcard-link-hint">
+                <a
+                  className="pcard-link-hint pcard-link-hint--featured"
+                  href="http://122.152.224.125:3001/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <ExternalIcon />
                   点击查看 Demo
-                </div>
+                </a>
                 <div className="ptag">AI Workflow · HITL Review · Context Engineering</div>
                 <h3 className="ptitle">AI 内容创作协作平台</h3>
                 <p className="psub">
@@ -209,8 +209,20 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
+                <div className="showreel">
+                  <div className="showreel-label">Product Showreel // 00:43</div>
+                  <div className="showreel-frame">
+                    <video
+                      className="showreel-video"
+                      controls
+                      playsInline
+                      preload="metadata"
+                      src="/media/ai-content-platform-showreel.mp4"
+                    />
+                  </div>
+                </div>
               </div>
-            </a>
+            </article>
 
             <a
               className="pcard reveal d1"

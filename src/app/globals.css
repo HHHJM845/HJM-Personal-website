@@ -775,6 +775,38 @@ a.pcard:focus-visible {
   grid-template-columns: 1fr 1fr;
 }
 
+.showreel {
+  margin-top: 20px;
+}
+
+.showreel-label {
+  color: rgba(255, 255, 255, 0.58);
+  font-family: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.showreel-frame {
+  aspect-ratio: 16 / 9;
+  background: rgba(0, 0, 0, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 20px 58px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.showreel-video {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 .ptag {
   align-items: center;
   background: var(--accent-dim);
@@ -943,6 +975,10 @@ a.pcard:focus-visible {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.8;
+}
+
+.pcard-link-hint--featured {
+  pointer-events: auto;
 }
 
 .pcard:hover .pcard-link-hint {
@@ -1465,6 +1501,19 @@ footer {
     grid-column: auto;
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+
+  .showreel-label {
+    font-size: 9px;
+    margin-bottom: 8px;
+  }
+
+  .showreel {
+    margin-top: 12px;
+  }
+
+  .showreel-frame {
+    border-radius: 14px;
   }
 
   .pcard {
