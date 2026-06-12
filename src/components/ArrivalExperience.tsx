@@ -208,15 +208,15 @@ export function ArrivalExperience() {
             HUANG JIAMU
           </h1>
           <p className="mt-6 max-w-md text-sm leading-6 text-white/72 sm:text-base">
-            把前沿 AI 能力，转化为真实可用的产品。
+            AI 工作流 · RAG · 机器视觉质检
             <span className="mt-2 block text-white/52">
-              From model capability to usable product workflow.
+              From model capability to measurable product workflow.
             </span>
           </p>
           <a
             className="btn btn-dark resume-download-btn arrival-resume-btn"
-            download="黄佳沐-AI产品经理.pdf"
-            href="/resume/黄佳沐-AI产品经理.pdf"
+            download="黄佳沐_AI产品经理.pdf.pdf"
+            href="/resume/黄佳沐_AI产品经理.pdf.pdf"
           >
             <svg aria-hidden="true" viewBox="0 0 24 24">
               <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" />

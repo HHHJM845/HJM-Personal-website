@@ -3,12 +3,12 @@ import { ArrivalExperience } from "@/components/ArrivalExperience";
 import { RevealEffects } from "@/components/RevealEffects";
 
 const stats = [
-  ["92", "%", "RAG 召回", "准确率"],
-  ["78", "%", "AI 建议", "一键采纳"],
-  ["8", "家", "付费影视", "工作室签约"],
+  ["3", "年", "AI 产品", "实践经验"],
+  ["80", "%", "视觉质检", "漏检率下降"],
+  ["92", "%", "RAG Prompt", "核心召回率"],
+  ["78", "%", "AI 建议", "采纳率"],
   ["500", "+", "销售人员", "覆盖"],
-  ["3", "×", "分镜策划", "效率提升"],
-  ["95", "%", "智能客服", "专业问答准确率"],
+  ["5", "类", "金条缺陷", "体系"],
 ];
 
 const tags = [
@@ -19,6 +19,9 @@ const tags = [
   "LLM",
   "AI Evaluation",
   "Model Selection",
+  "Machine Vision",
+  "HITL",
+  "Bad Case",
   "Claude Code",
   "Codex",
   "AI-assisted Prototyping",
@@ -28,11 +31,9 @@ const tags = [
 ];
 
 const methodology = [
-  ["01", "场景洞察", "识别真实用户工作流中的高频痛点。"],
-  ["02", "AI 能力匹配", "判断问题是否适合用 RAG、Agent、LLM 或自动化工作流解决。"],
-  ["03", "快速原型验证", "使用 Claude Code / Codex 等工具快速搭建可交互 Demo。"],
-  ["04", "评测框架设计", "用准确率、采纳率、召回率、转化率等指标验证 AI 效果。"],
-  ["05", "商业化落地", "通过定价、成本结构、用户反馈闭环完成 PMF 验证。"],
+  ["01", "场景定义", "从真实用户工作流与产线现场拆解功能空白，把模糊反馈还原为可评估、可排期、可验证的具体场景成本。"],
+  ["02", "策略 / 评测 / 迭代", "围绕检索质量、生成效果、合规边界和用户反馈定义评测口径，并用 Bad Case 归因持续推动产品迭代。"],
+  ["03", "人机协同", "明确 AI 能力边界，通过 HITL、置信度分级、人工复核与一键采纳机制，让 AI 可控地进入业务流程。"],
 ];
 
 const skills = [
@@ -40,23 +41,23 @@ const skills = [
     "01",
     "AI 产品设计",
     [
+      "AI 工作流",
       "RAG",
       "Agentic RAG",
       "Prompt Engineering",
       "Context Engineering",
+      "机器视觉质检",
       "AI Evaluation",
-      "Model Selection",
-      "Dialogue State Machine",
     ],
   ],
-  ["02", "产品策略", ["用户访谈", "竞品分析", "PMF 验证", "订阅 + 积分", "商业化设计"]],
-  ["03", "技术协作", ["LLM 选型", "Embedding 评测", "AI Eval", "Badcase 归因", "API 集成", "Claude Code", "Codex"]],
-  ["04", "AIGC 创作工具", ["分镜生成", "视频模型评测", "3D 导演台", "视觉工作流", "内容生产效率优化"]],
+  ["02", "用户场景与商业化", ["用户访谈", "产线驻场", "竞品分析", "真实流程识别痛点", "试用转化", "PMF 早期信号"]],
+  ["03", "数据评测", ["准确率 / 召回率 / 采纳率", "评估集建设", "Bad Case 归因", "合规校验策略", "置信度分级"]],
+  ["04", "工具原型", ["Claude Code", "Codex", "Figma", "Axure", "墨刀", "飞书", "Notion"]],
 ];
 
 const experience = [
-  ["2025.09 - 至今", "深圳跃然像素科技", "产品经理 · AI 内容工具 / 多模型评测 / 商业化冷启动"],
-  ["2024.07 - 2025.09", "深圳华禧文化", "产品经理 · 轻量 Agentic RAG / 智能客服与销售培训"],
+  ["2025.09 - 2026.05", "深圳跃然像素科技", "产品经理 · AI 内容工具研发初创公司"],
+  ["2024.07 - 2025.09", "深圳华禧文化", "产品经理 · 黄金 ToB 批发数字化与 AI 赋能"],
   ["2023.02 - 2023.12", "网易有道", "产品助理实习生 · RAG 语料治理 / 评估集建设 / Prompt 调优"],
   ["2020.09 - 2024.06", "广州美术学院", "影视摄影与制作 · 本科"],
 ];
@@ -131,9 +132,9 @@ export default function Home() {
               </h2>
               <p className="about-body reveal d2">
                 我是一名 <strong>AI 产品经理</strong>
-                ，具备从产品定义到技术落地的独立判断能力，主导过 AI 内容生产工作流、RAG 三层检索、轻量
-                Agentic RAG、对话状态机与 Prompt / Context Engineering 落地。相比只做需求管理，我更关注
-                AI 是否真正解决用户工作流中的痛点，并通过模型评测、数据反馈、快速原型和 PMF 验证推动产品价值闭环。
+                ，拥有 3 年 AI 产品与数字化产品实践经验，覆盖 AI 工作流 · RAG · 机器视觉质检等场景。
+                我擅长从真实业务流程中定位高成本节点，把模型能力拆成可评估、可协作、可落地的产品链路，
+                并通过 HITL、人机协同、评测体系、Bad Case 归因和快速原型推动方案进入真实业务。
               </p>
               <div className="tag-row reveal d3">
                 {tags.map((tag) => (
@@ -170,14 +171,14 @@ export default function Home() {
                 <div className="ptag">AI Workflow · HITL Review · Context Engineering</div>
                 <h3 className="ptitle">AI 内容创作协作平台</h3>
                 <p className="psub">
-                  面向影视与内容团队的 AI 创作协作平台，从单点生成工具升级为可管理的团队工作流。
+                  面向影视 / 内容创作团队，将产品定位从单点生成工具升级为可管理的 AI 创作协作平台。
                 </p>
                 <ul className="phigh">
-                  <li>调研 9 个主流 AIGC 工具并访谈影视团队，定义多项目管理、版本控制、甲方审片等协作能力</li>
-                  <li>设计剧本解析、Prompt 生成、图片生成、批注审阅的 AI 全链路视觉工作流与 HITL 审阅机制</li>
-                  <li>设计多模型评测框架，评估 Kling、Seedance、Vidu、Nano Banana、即梦等模型调用策略</li>
-                  <li>搭建 RAG Prompt 经验库与 Context Engineering 测评集，口语化指令召回从 60% 提升至 92%</li>
-                  <li>完成商业化冷启动，签约 8 家付费影视工作室，采用「订阅 + 积分」双轨变现模式</li>
+                  <li>调研 9 个主流 AIGC 工具并访谈多家创作团队，识别脚本拆分镜、Prompt 复用、版本管理与甲方审片断裂等真实成本</li>
+                  <li>将剧本解析、Prompt 生成、图 / 视频生成、批注审阅拆为可协作任务模块，设计「生成 - 审阅 - 优化 - 再生成」闭环</li>
+                  <li>从生成质量、风格适配、Prompt 响应、速度、API 稳定性、并发能力评估 Kling、Seedance、Vidu、Nano Banana、即梦等模型</li>
+                  <li>设计 RAG Prompt 经验库的入库规则、质量权重、排序机制与三层检索链路，核心测评集召回率达 92%</li>
+                  <li>推动甲方免注册批注与 AI 优化建议一键应用；参与「订阅 + 积分」定价，完成 8 家付费客户签约，5 家进入第二周期续费</li>
                   <li>辅助增量作品入围海南岛国际电影节 AI 电影季、北京国际电影节 AIGC 电影单元，并获海螺 AI × WAIFF 最佳叙事奖</li>
                 </ul>
               </div>
@@ -186,7 +187,7 @@ export default function Home() {
                   {[
                     ["RAG Recall Accuracy", "92%", "92%"],
                     ["AI Suggestion Adoption", "78%", "78%"],
-                    ["Target Gross Margin", "40%+", "40%"],
+                    ["Renewal Customers", "5", "62%"],
                   ].map(([name, value, width]) => (
                     <div className="pm-row" key={name}>
                       <div className="pm-top">
@@ -224,48 +225,47 @@ export default function Home() {
               </div>
             </article>
 
-            <a
-              className="pcard reveal d1"
-              href="http://175.178.27.151/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div className="pcard-link-hint">
-                <ExternalIcon />
-                点击查看 Demo
-              </div>
-              <div className="ptag">MVP · Marketplace · AI Matching · Escrow</div>
-              <h3 className="ptitle">AI 影视承接平台</h3>
-              <p className="psub">已上线内测，连接影视制作公司与 AI 创作者的双边协作平台。</p>
+            <article className="pcard reveal d1">
+              <div className="ptag">Machine Vision · HITL · 质量追溯 · 产线试点</div>
+              <h3 className="ptitle">AI 视觉质检系统</h3>
+              <p className="psub">
+                面向标准矩形压制金条试点产线，设计「AI 初筛 + 人工复核 + 数据追溯」的人机协同质检系统。
+              </p>
               <ul className="phigh">
-                <li>2 周内独立交付双角色 MVP，覆盖需求发布、投标承接、合同签署、里程碑交付审核</li>
-                <li>引入 AI 自动打标签机制，依据创作者上传作品生成能力标签并自动匹配相关需求</li>
-                <li>支持作品集展示、资质验证、资金托管与甲乙双方自定义付款比例、里程碑节点</li>
+                <li>驻线 3 周梳理包装前裸条检测、人工复核、包装后复核三段流程，确认 AI 初筛与人工终判边界</li>
+                <li>将金条问题拆为外观缺陷、边角缺陷、标识 / OCR、包装匹配、追溯异常 5 类 14 项，建立缺陷定义、样本标注与置信度分级标准</li>
+                <li>对错 SKU、编号 / 证书错配、严重崩边等致命问题设置硬规则强拦截，疑似件进入人工复核队列</li>
+                <li>定义工单、SKU、批次、编号、原图 / 结果图、AI 结果、人工结论、模型版本等留痕字段与 MES / QMS 回传规则</li>
+                <li>围绕金面高反光浅划痕、包装膜反光、误报积压等边界场景，协同算法与设备侧优化成像方案、阈值和复检规则</li>
               </ul>
               <div className="pstats">
                 <div className="ps-item">
-                  <div className="ps-num">2w</div>
-                  <div className="ps-lbl">MVP 完成时间</div>
+                  <div className="ps-num">80%</div>
+                  <div className="ps-lbl">漏检率 10%→2%</div>
                 </div>
                 <div className="ps-item">
-                  <div className="ps-num">2</div>
-                  <div className="ps-lbl">双角色闭环</div>
+                  <div className="ps-num">40%</div>
+                  <div className="ps-lbl">质检效率提升</div>
                 </div>
                 <div className="ps-item">
-                  <div className="ps-num">Auto</div>
-                  <div className="ps-lbl">AI 自动标签</div>
+                  <div className="ps-num">85%</div>
+                  <div className="ps-lbl">初筛准确率</div>
                 </div>
               </div>
-            </a>
+            </article>
 
             <article className="pcard reveal d2">
-              <div className="ptag">Agentic RAG · AI Eval · 智能客服 · ToB</div>
+              <div className="ptag">RAG 产品策略 · 对话状态机 · AI Eval · 合规校验</div>
               <h3 className="ptitle">RAG 智能客服与销售培训系统</h3>
-              <p className="psub">面向黄金批发业务的私域咨询承接与新人销售培训系统，数字人作为后续增强层。</p>
+              <p className="psub">
+                面向黄金 ToB 批发的私域咨询和新人培养，搭建共用知识库的 RAG 智能客服 + 销售培训助手。
+              </p>
               <ul className="phigh">
-                <li>设计 Router 意图路由、Retriever 检索增强、Grader 相关性判断、Generator 答案生成、Verifier 合规校验的轻量 Agentic RAG 控制回路</li>
-                <li>设计 120 题分场景评估集，结合人工抽检与 LLM 辅助评分，专业问答准确率达 95%</li>
-                <li>5 个月完成 MVP，覆盖 500+ 销售人员，新人培训周期缩短约 60%，私域响应效率提升 2 倍</li>
+                <li>将需求拆成 RAG 智能客服和销售培训助手两条链路：客服侧覆盖产品咨询、辅助报价、异议处理和转人工，培训侧提供 Persona 模拟、Rubric 评分和错题本沉淀</li>
+                <li>定义意图识别、检索召回、答案生成、合规校验、转人工判断等产品策略节点，降低错答、越界回复和高风险场景硬答</li>
+                <li>将知识拆为产品知识、政策合规、实时行情、话术库、Persona 库，并用结构化字段校验与合规规则拦截红线话术</li>
+                <li>用需求识别、产品推荐、异议处理、报价确认、合规确认 / 转人工等状态约束多轮回复目标、追问策略和边界</li>
+                <li>设计 120 题分场景评估集，按产品知识、报价、推荐、异议处理、合规边界等维度评分并推动 Bad Case 归因迭代</li>
               </ul>
               <div className="pstats">
                 <div className="ps-item">
@@ -279,6 +279,34 @@ export default function Home() {
                 <div className="ps-item">
                   <div className="ps-num">15%</div>
                   <div className="ps-lbl">展厅转化提升</div>
+                </div>
+              </div>
+            </article>
+
+            <article className="pcard reveal d3">
+              <div className="ptag">教育 RAG · 语料治理 · Prompt 调优 · 产品测试</div>
+              <h3 className="ptitle">网易有道教育 RAG 语料治理</h3>
+              <p className="psub">
+                面向智慧教育长文档问答场景，参与 RAG 语料治理、召回评估、Prompt 调优与早期产品测试。
+              </p>
+              <ul className="phigh">
+                <li>整理 1000+ 条 PDF 教材与翻译文档语料，围绕语义完整性、版面解析、跨段落召回构建错误 taxonomy</li>
+                <li>辅助算法组定位复杂排版下的检索与解析失败问题，沉淀结构化错误归因与优化建议</li>
+                <li>围绕切题性、语气适配、指令遵循做盲测评分，构建约 80 条学生口语化提问引导语库</li>
+                <li>对 QAnything 早期内测长文档分块和追问引导问题输出结构化 Bug 清单</li>
+              </ul>
+              <div className="pstats">
+                <div className="ps-item">
+                  <div className="ps-num">1000+</div>
+                  <div className="ps-lbl">语料整理</div>
+                </div>
+                <div className="ps-item">
+                  <div className="ps-num">80</div>
+                  <div className="ps-lbl">口语化提问库</div>
+                </div>
+                <div className="ps-item">
+                  <div className="ps-num">QAnything</div>
+                  <div className="ps-lbl">早期内测反馈</div>
                 </div>
               </div>
             </article>
@@ -367,6 +395,19 @@ export default function Home() {
             <div className="clink-row">
               <div className="clink-icon">
                 <svg viewBox="0 0 24 24">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.59 2.61a2 2 0 0 1-.45 2.11L8 9.69a16 16 0 0 0 6.31 6.31l1.25-1.25a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.61.59A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <div>
+                <div className="clink-lbl">电话</div>
+                <div className="clink-val">
+                  <a href="tel:13243747631">132-4374-7631</a>
+                </div>
+              </div>
+            </div>
+            <div className="clink-row">
+              <div className="clink-icon">
+                <svg viewBox="0 0 24 24">
                   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                 </svg>
               </div>
@@ -402,8 +443,8 @@ export default function Home() {
             </a>
             <a
               className="btn btn-ghost resume-download-btn"
-              download="黄佳沐-AI产品经理.pdf"
-              href="/resume/黄佳沐-AI产品经理.pdf"
+              download="黄佳沐_AI产品经理.pdf.pdf"
+              href="/resume/黄佳沐_AI产品经理.pdf.pdf"
             >
               <svg aria-hidden="true" viewBox="0 0 24 24">
                 <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" />

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "黄佳沐 // AI Product Manager",
   description:
-    "黄佳沐的 AI 产品经理个人网站：AI Workflow、RAG、AIGC、模型评测与商业化落地。",
+    "黄佳沐的 AI 产品经理个人网站：AI 工作流、RAG、机器视觉质检、HITL、模型评测与快速原型验证。",
 };
 
 export default function RootLayout({
